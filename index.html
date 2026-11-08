@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ErgoMuebles | Tienda Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <a href="#" class="logo">🌿 ErgoMuebles</a>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar en ErgoMuebles" aria-label="Buscar productos">
+            <button type="button" id="clear-search" class="clear-btn" style="display:none;" aria-label="Limpiar búsqueda">✖</button>
+            <button type="button" id="search-btn">Buscar</button>
+        </div>
+
+        <nav aria-label="Categorías">
+            <ul>
+                <li><a href="#" id="menu-inicio">Inicio</a></li>
+                <li><a href="#" id="menu-sillas">Sillas</a></li>
+                <li><a href="#" id="menu-escritorios">Escritorios</a></li>
+                <li><a href="#" id="menu-accesorios">Accesorios</a></li>
+                <li><a href="#" id="menu-ofertas">Ofertas</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button type="button" class="cart-container" id="btn-abrir-carrito" aria-label="Abrir carrito">
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cart-counter">0</span>
+            </button>
+            <button type="button" id="btn-abrir-login" class="login-btn">👤 Iniciar Sesión</button>
+
+            <div class="user-profile" id="user-profile">
+                <button type="button" id="btn-user-menu" class="user-btn">👤 <span id="user-name-display">Usuario</span> ▼</button>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="#">Mi Perfil</a>
+                    <a href="#">Mis Pedidos</a>
+                    <a href="#" id="btn-cerrar-sesion">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CATÁLOGO -->
+    <main class="productos-section">
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Ergonómica Pro</h3>
+            <p class="precio">$150.00</p>
+            <button class="btn-agregar" data-nombre="Silla Ergonómica Pro" data-precio="150">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=500&q=80" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Ajustable</h3>
+            <p class="precio">$250.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Ajustable" data-precio="250">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?w=500&q=80" alt="Estantería" class="producto-img">
+            <h3>Estantería Eco</h3>
+            <p class="precio">$80.00</p>
+            <button class="btn-agregar" data-nombre="Estantería Eco" data-precio="80">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80" alt="Lámpara" class="producto-img">
+            <h3>Lámpara LED Inteligente</h3>
+            <p class="precio">$45.00</p>
+            <button class="btn-agregar" data-nombre="Lámpara LED Inteligente" data-precio="45">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80" alt="Soporte" class="producto-img">
+            <h3>Soporte para Monitor</h3>
+            <p class="precio">$35.00</p>
+            <button class="btn-agregar" data-nombre="Soporte para Monitor" data-precio="35">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="img/Reposapies.jpeg" alt="Reposapiés" class="producto-img">
+            <h3>Reposapiés Ergonómico</h3>
+            <p class="precio">$60.00</p>
+            <button class="btn-agregar" data-nombre="Reposapiés Ergonómico" data-precio="60">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=500&q=80" alt="Organizador" class="producto-img">
+            <h3>Organizador de Madera</h3>
+            <p class="precio">$25.00</p>
+            <button class="btn-agregar" data-nombre="Organizador de Madera" data-precio="25">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1595044426077-d36d9236d54a?w=500&q=80" alt="Teclado" class="producto-img">
+            <h3>Teclado Ergonómico</h3>
+            <p class="precio">$75.00</p>
+            <button class="btn-agregar" data-nombre="Teclado Ergonómico" data-precio="75">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80" alt="Mouse" class="producto-img">
+            <h3>Mouse Vertical Inalámbrico</h3>
+            <p class="precio">$40.00</p>
+            <button class="btn-agregar" data-nombre="Mouse Vertical Inalámbrico" data-precio="40">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=500&q=80" alt="Cojín" class="producto-img">
+            <h3>Cojín Lumbar Eco</h3>
+            <p class="precio">$30.00</p>
+            <button class="btn-agregar" data-nombre="Cojín Lumbar Eco" data-precio="30">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="img/MesaAuxiliar.jpeg" alt="Mesa" class="producto-img">
+            <h3>Mesa Auxiliar Nórdica</h3>
+            <p class="precio">$90.00</p>
+            <button class="btn-agregar" data-nombre="Mesa Auxiliar Nórdica" data-precio="90">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="img/Panel.jpeg" alt="Panel" class="producto-img">
+            <h3>Panel Acústico Reciclado</h3>
+            <p class="precio">$55.00</p>
+            <button class="btn-agregar" data-nombre="Panel Acústico Reciclado" data-precio="55">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="img/SillaGamer.jpeg" alt="Silla Gamer" class="producto-img">
+            <h3>Silla Gamer Eco</h3>
+            <p class="precio">$180.00</p>
+            <button class="btn-agregar" data-nombre="Silla Gamer Eco" data-precio="180">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Ejecutiva Premium</h3>
+            <p class="precio">$220.00</p>
+            <button class="btn-agregar" data-nombre="Silla Ejecutiva" data-precio="220">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla de Visita Minimalista</h3>
+            <p class="precio">$85.00</p>
+            <button class="btn-agregar" data-nombre="Silla de Visita" data-precio="85">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1589384267710-7a170981ca78?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Reclinable Relax</h3>
+            <p class="precio">$195.00</p>
+            <button class="btn-agregar" data-nombre="Silla Reclinable" data-precio="195">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1519947486511-46149fa0a254?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Mesh Transpirable</h3>
+            <p class="precio">$130.00</p>
+            <button class="btn-agregar" data-nombre="Silla Mesh" data-precio="130">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Plegable Eco</h3>
+            <p class="precio">$45.00</p>
+            <button class="btn-agregar" data-nombre="Silla Plegable" data-precio="45">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla de Director Clásica</h3>
+            <p class="precio">$160.00</p>
+            <button class="btn-agregar" data-nombre="Silla de Director" data-precio="160">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Nórdica Gris</h3>
+            <p class="precio">$110.00</p>
+            <button class="btn-agregar" data-nombre="Silla Nórdica" data-precio="110">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Creativa Rosa</h3>
+            <p class="precio">$95.00</p>
+            <button class="btn-agregar" data-nombre="Silla Rosa" data-precio="95">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="sillas">
+            <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=500&q=80" alt="Silla" class="producto-img">
+            <h3>Silla Bambú Natural</h3>
+            <p class="precio">$140.00</p>
+            <button class="btn-agregar" data-nombre="Silla Bambú" data-precio="140">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80" alt="Escritorio" class="producto-img">
+            <h3>Escritorio en L Moderno</h3>
+            <p class="precio">$320.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio en L" data-precio="320">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="img/mesacompacto.jpg" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Compacto</h3>
+            <p class="precio">$120.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Compacto" data-precio="120">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=500&q=80" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Estilo Industrial</h3>
+            <p class="precio">$280.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Industrial" data-precio="280">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=500&q=80" alt="Escritorio" class="producto-img">
+            <h3>Escritorio de Cristal Templado</h3>
+            <p class="precio">$210.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Cristal" data-precio="210">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="img/escritorioflotante.jpg" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Flotante de Pared</h3>
+            <p class="precio">$110.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Flotante" data-precio="110">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Esquinero Eco</h3>
+            <p class="precio">$260.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Esquinero" data-precio="260">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="img/escritoriomadera.jfif" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Madera Maciza</h3>
+            <p class="precio">$350.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Madera" data-precio="350">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=500&q=80" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Blanco Nórdico</h3>
+            <p class="precio">$180.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Blanco" data-precio="180">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=500&q=80" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Gamer LED</h3>
+            <p class="precio">$290.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Gamer" data-precio="290">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="escritorios">
+            <img src="img/escritoriopegable.jpg" alt="Escritorio" class="producto-img">
+            <h3>Escritorio Plegable Portátil</h3>
+            <p class="precio">$99.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Plegable" data-precio="99">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80" alt="Brazo" class="producto-img">
+            <h3>Brazo Articulado para Monitor</h3>
+            <p class="precio">$65.00</p>
+            <button class="btn-agregar" data-nombre="Brazo Monitor" data-precio="65">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1595044426077-d36d9236d54a?w=500&q=80" alt="Hub" class="producto-img">
+            <h3>Hub USB-C 7 en 1</h3>
+            <p class="precio">$35.00</p>
+            <button class="btn-agregar" data-nombre="Hub USB-C" data-precio="35">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80" alt="Base" class="producto-img">
+            <h3>Base Elevadora para Laptop</h3>
+            <p class="precio">$28.00</p>
+            <button class="btn-agregar" data-nombre="Base Laptop" data-precio="28">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=500&q=80" alt="Almohada" class="producto-img">
+            <h3>Almohada Cervical de Viaje</h3>
+            <p class="precio">$22.00</p>
+            <button class="btn-agregar" data-nombre="Almohada Cervical" data-precio="22">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=500&q=80" alt="Tapete" class="producto-img">
+            <h3>Tapete Ergonómico Antifatiga</h3>
+            <p class="precio">$48.00</p>
+            <button class="btn-agregar" data-nombre="Tapete Ergonómico" data-precio="48">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="img/organizadorcables.jfif" alt="Cables" class="producto-img">
+            <h3>Organizador de Cables de Madera</h3>
+            <p class="precio">$15.00</p>
+            <button class="btn-agregar" data-nombre="Organizador Cables" data-precio="15">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80" alt="Luz" class="producto-img">
+            <h3>Lámpara de Escritorio Táctil</h3>
+            <p class="precio">$38.00</p>
+            <button class="btn-agregar" data-nombre="Lámpara Táctil" data-precio="38">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?w=500&q=80" alt="Stand" class="producto-img">
+            <h3>Soporte para Audífonos Eco</h3>
+            <p class="precio">$20.00</p>
+            <button class="btn-agregar" data-nombre="Soporte Audífonos" data-precio="20">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&q=80" alt="Tablet" class="producto-img">
+            <h3>Soporte Ajustable para Tablet</h3>
+            <p class="precio">$25.00</p>
+            <button class="btn-agregar" data-nombre="Soporte Tablet" data-precio="25">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="accesorios">
+            <img src="img/termointeligente.jfif" alt="Termo" class="producto-img">
+            <h3>Termo Inteligente para Café</h3>
+            <p class="precio">$32.00</p>
+            <button class="btn-agregar" data-nombre="Termo Café" data-precio="32">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1595044426077-d36d9236d54a?w=500&q=80" alt="Kit" class="producto-img">
+            <h3>Kit de Oficina Completo</h3>
+            <p class="precio">$199.00</p>
+            <button class="btn-agregar" data-nombre="Kit Oficina" data-precio="199">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=500&q=80" alt="Combo" class="producto-img">
+            <h3>Combo Silla + Escritorio</h3>
+            <p class="precio">$350.00</p>
+            <button class="btn-agregar" data-nombre="Combo Silla Escritorio" data-precio="350">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80" alt="Pack" class="producto-img">
+            <h3>Pack 3 Accesorios Tech</h3>
+            <p class="precio">$75.00</p>
+            <button class="btn-agregar" data-nombre="Pack Accesorios" data-precio="75">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=500&q=80" alt="Silla Outlet" class="producto-img">
+            <h3>Silla Outlet (Poco uso)</h3>
+            <p class="precio">$89.00</p>
+            <button class="btn-agregar" data-nombre="Silla Outlet" data-precio="89">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="img/escritoriou.webp" alt="Escritorio Outlet" class="producto-img">
+            <h3>Escritorio Outlet</h3>
+            <p class="precio">$120.00</p>
+            <button class="btn-agregar" data-nombre="Escritorio Outlet" data-precio="120">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="img/lamparaescrit.jfif" alt="Lámpara Oferta" class="producto-img">
+            <h3>Lámpara de Escritorio (Oferta)</h3>
+            <p class="precio">$25.00</p>
+            <button class="btn-agregar" data-nombre="Lámpara Oferta" data-precio="25">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1595044426077-d36d9236d54a?w=500&q=80" alt="Teclado Oferta" class="producto-img">
+            <h3>Teclado Mecánico (Oferta)</h3>
+            <p class="precio">$55.00</p>
+            <button class="btn-agregar" data-nombre="Teclado Oferta" data-precio="55">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&q=80" alt="Mouse Oferta" class="producto-img">
+            <h3>Mouse Inalámbrico (Oferta)</h3>
+            <p class="precio">$18.00</p>
+            <button class="btn-agregar" data-nombre="Mouse Oferta" data-precio="18">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="img/reposapies2.png" alt="Reposapiés Oferta" class="producto-img">
+            <h3>Reposapiés (Oferta)</h3>
+            <p class="precio">$35.00</p>
+            <button class="btn-agregar" data-nombre="Reposapiés Oferta" data-precio="35">Agregar al Carrito</button>
+        </div>
+
+        <div class="producto-card" data-categoria="ofertas">
+            <img src="https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=500&q=80" alt="Organizador Oferta" class="producto-img">
+            <h3>Organizador de Escritorio (Oferta)</h3>
+            <p class="precio">$12.00</p>
+            <button class="btn-agregar" data-nombre="Organizador Oferta" data-precio="12">Agregar al Carrito</button>
+        </div>
+    </main>
+
+    <!-- CARRITO -->
+    <div class="modal" id="modal-carrito">
+        <div class="modal-content">
+            <button type="button" class="cerrar-modal" id="cerrar-carrito">&times;</button>
+            <h2>Tu carrito</h2>
+
+            <div id="cart-items"></div>
+
+            <div class="envio-box">
+                <h3>📍 Calcular envío</h3>
+                <label for="envio-cp">Código Postal</label>
+                <input type="text" id="envio-cp" maxlength="5" placeholder="Ej. 64000" inputmode="numeric">
+
+                <label for="envio-zona">Zona de entrega</label>
+                <select id="envio-zona">
+                    <option value="">Selecciona tu zona</option>
+                    <option value="local">Local (misma ciudad) — $50</option>
+                    <option value="regional">Regional (estado) — $120</option>
+                    <option value="nacional">Nacional (resto del país) — $200</option>
+                </select>
+
+                <button type="button" id="btn-calcular-envio" class="btn-secundario">Calcular envío</button>
+
+                <p id="envio-resultado" class="envio-resultado"></p>
+            </div>
+
+            <div class="cart-resumen">
+                <div class="linea-resumen">
+                    <span>Subtotal:</span>
+                    <span>$<span id="cart-subtotal">0.00</span></span>
+                </div>
+                <div class="linea-resumen">
+                    <span>Envío:</span>
+                    <span id="cart-envio">—</span>
+                </div>
+                <div class="cart-total">
+                    Total: $<span id="cart-total">0.00</span>
+                </div>
+            </div>
+
+            <button type="button" id="btn-checkout" class="btn-principal">Continuar compra</button>
+        </div>
+    </div>
+
+    <!-- MODAL LOGIN / REGISTRO (CON PESTAÑAS) -->
+    <div class="modal" id="modal-auth">
+        <div class="modal-content">
+            <button type="button" class="cerrar-modal" id="cerrar-auth">&times;</button>
+            <h2>Mi Cuenta</h2>
+            
+            <!-- TABS -->
+            <div class="auth-tabs">
+                <button type="button" class="auth-tab active" id="tab-login">Iniciar sesión</button>
+                <button type="button" class="auth-tab" id="tab-registro">Crear cuenta</button>
+            </div>
+
+            <!-- FORMULARIO LOGIN -->
+            <div id="contenedor-login">
+                <form id="form-login">
+                    <label for="login-email">Correo electrónico</label>
+                    <input type="email" id="login-email" required>
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" required>
+                    <button type="submit" class="btn-principal">Entrar</button>
+                </form>
+            </div>
+
+            <!-- FORMULARIO REGISTRO -->
+            <div id="contenedor-registro" style="display: none;">
+                <form id="form-registro">
+                    <label for="registro-nombre">Nombre completo</label>
+                    <input type="text" id="registro-nombre" required>
+                    <label for="registro-email">Correo electrónico</label>
+                    <input type="email" id="registro-email" required>
+                    <label for="registro-password">Contraseña</label>
+                    <input type="password" id="registro-password" required>
+                    <button type="submit" class="btn-principal">Registrarme</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGO -->
+    <div class="modal" id="modal-pago">
+        <div class="modal-content">
+            <button type="button" class="cerrar-modal" id="cerrar-pago">&times;</button>
+            <h2>Finalizar compra</h2>
+            <form id="form-pago">
+                <label for="nombre-pago">Nombre completo</label>
+                <input type="text" id="nombre-pago" required>
+                <label for="direccion-pago">Dirección de entrega</label>
+                <input type="text" id="direccion-pago" required>
+                <label for="telefono-pago">Teléfono</label>
+                <input type="tel" id="telefono-pago" required>
+                <label for="metodo-pago">Método de pago</label>
+                <select id="metodo-pago" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="tarjeta">Tarjeta</option>
+                    <option value="transferencia">Transferencia</option>
+                    <option value="efectivo">Efectivo</option>
+                </select>
+                <button type="submit" class="btn-principal">Confirmar pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL LEGAL -->
+    <div class="modal" id="modal-legal">
+        <div class="modal-content">
+            <button type="button" class="cerrar-modal" id="cerrar-legal">&times;</button>
+            <h2 id="legal-titulo">Política de Privacidad</h2>
+            <div id="legal-contenido" class="legal-contenido"></div>
+        </div>
+    </div>
+
+    <!-- MODAL RESEÑAS -->
+    <div class="modal" id="modal-resenas">
+        <div class="modal-content modal-resenas-content">
+            <button type="button" class="cerrar-modal" id="cerrar-resenas">&times;</button>
+
+            <h2 id="resenas-producto-nombre">Reseñas del producto</h2>
+
+            <div class="resenas-resumen">
+                <div class="resenas-promedio">
+                    <span id="resenas-promedio-num">0.0</span>
+                    <div id="resenas-promedio-estrellas" class="estrellas-display">☆☆☆☆☆</div>
+                    <span id="resenas-total" class="resenas-total">0 reseñas</span>
+                </div>
+            </div>
+
+            <form id="form-resena" class="form-resena">
+                <h3>Deja tu reseña</h3>
+
+                <label for="resena-nombre">Tu nombre</label>
+                <input type="text" id="resena-nombre" maxlength="40" required placeholder="Ej. Ana">
+
+                <label>Calificación</label>
+                <div class="estrellas-input" id="estrellas-input">
+                    <button type="button" class="estrella-btn" data-valor="1">★</button>
+                    <button type="button" class="estrella-btn" data-valor="2">★</button>
+                    <button type="button" class="estrella-btn" data-valor="3">★</button>
+                    <button type="button" class="estrella-btn" data-valor="4">★</button>
+                    <button type="button" class="estrella-btn" data-valor="5">★</button>
+                </div>
+                <input type="hidden" id="resena-estrellas" value="0">
+
+                <label for="resena-comentario">Comentario</label>
+                <textarea id="resena-comentario" rows="3" maxlength="300" required placeholder="¿Qué te pareció el producto?"></textarea>
+
+                <button type="submit" class="btn-principal">Publicar reseña</button>
+            </form>
+
+            <hr class="separador-resenas">
+
+            <div id="lista-resenas"></div>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>🌿 ErgoMuebles TCG</h3>
+                <p>Somos tu mejor opción para equipar tu espacio de trabajo.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="#" id="footer-inicio">Catálogo Completo</a></li>
+                    <li><a href="#" id="footer-sillas">Sillas Ergonómicas</a></li>
+                    <li><a href="#" id="footer-escritorios">Escritorios</a></li>
+                    <li><a href="#" id="footer-accesorios">Accesorios</a></li>
+                    <li><a href="#" id="footer-ofertas">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Soporte Legal</h3>
+                <ul>
+                    <li><a href="#" class="legal-link" data-legal="privacidad">Política de Privacidad</a></li>
+                    <li><a href="#" class="legal-link" data-legal="terminos">Términos y Condiciones</a></li>
+                    <li><a href="#" class="legal-link" data-legal="cookies">Política de Cookies</a></li>
+                    <li><a href="#" class="legal-link" data-legal="devoluciones">Devoluciones y Reembolsos</a></li>
+                    <li><a href="#" class="legal-link" data-legal="aviso">Aviso Legal</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© 2026 ErgoMuebles. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/528991244915" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2.1 7L3 29l6.4-2.1c2 1.1 4.2 1.7 6.6 1.7h.1c7.1 0 12.9-5.7 12.9-12.8C29 8.7 23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.8-1.7l-.4-.2-3.8 1 1-3.7-.3-.4a10.6 10.6 0 0 1-1.8-5.9C4.9 9.6 9.9 4.7 16 4.7s11.1 4.9 11.1 10.9S22.1 26.4 16 26.4zm6.1-8.2c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6s-.7-1.7-.9-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.6s1.2 3 1.4 3.2c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.6.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/>
+        </svg>
+    </a>
+
+    <!-- CHAT -->
+    <a href="#" class="chat-float" id="chat-float" aria-label="Abrir chat">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2C6.5 2 2 6.2 2 11.4c0 2.1.8 4.1 2.2 5.6L3 22l5.3-1.7c1.2.4 2.4.6 3.7.6 5.5 0 10-4.2 10-9.5S17.5 2 12 2zm1.1 14.1-1.2-3.2-2.1 2.3 1.1-5.3 1.3 3.1 2-2.2-1.1 5.3z"/>
+        </svg>
+    </a>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
